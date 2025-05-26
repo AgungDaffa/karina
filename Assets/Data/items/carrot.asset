@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e0dc76274764e4493ce4cdf0a01ef9, type: 3}
+  m_Name: carrot
+  m_EditorClassIdentifier: 
+  description: technically a di
+  thumbnail: {fileID: 1266925200, guid: 8dc15489dce9f024492ec83664655b64, type: 3}
+  gameModel: {fileID: 1000014111768446, guid: 7b7619824a5fbfb45a66242337aa5d18, type: 3}

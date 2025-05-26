@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: sayuran hijau
   thumbnail: {fileID: 2093142372, guid: 8dc15489dce9f024492ec83664655b64, type: 3}
-  gameModel: {fileID: 0}
+  gameModel: {fileID: 8554979865545778643, guid: 71fbe0337a1d9a24e9dacfb8a4b3af76, type: 3}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu(menuName ="Items/Item")]
-public class itemData : ScriptableObject
+public class ItemData : ScriptableObject
 {
     public string description;
 

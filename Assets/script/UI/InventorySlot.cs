@@ -6,10 +6,11 @@ using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
-
-    itemData itemToDisplay;
+    ItemData itemToDisplay;
+    int quantity;
 
     public Image itemDisplayImage;
+    public Text quantityText;
 
     public enum InventoryType
     {
@@ -20,19 +21,32 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     int slotIndex;
 
-    public void Display(itemData itemToDisplay)
+    public void Display(ItemSlotData itemSlot)
     {
+        //Set the variables accordingly 
+        itemToDisplay = itemSlot.itemData;
+        quantity = itemSlot.quantity;
+
+        //By default, the quantity text should not show
+        quantityText.text = "";
+
         //Check if there is an item to display
         if (itemToDisplay != null)
         {
             //Switch the thumbnail over
             itemDisplayImage.sprite = itemToDisplay.thumbnail;
-            this.itemToDisplay = itemToDisplay;
+
+            //Display the stack quantity if there is more than 1 in the stack
+            if (quantity > 1)
+            {
+                quantityText.text = quantity.ToString();
+            }
 
             itemDisplayImage.gameObject.SetActive(true);
 
             return;
         }
+
         itemDisplayImage.gameObject.SetActive(false);
 
 
@@ -41,7 +55,7 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public virtual void OnPointerClick(PointerEventData eventData)
     {
         //Move item from inventory to hand
-        InventoryManager.Instance.InventoryToHand();
+        InventoryManager.Instance.InventoryToHand(slotIndex, inventoryType);
     }
 
     //Set the Slot index
@@ -50,26 +64,17 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         this.slotIndex = slotIndex;
     }
 
+
     //Display the item info on the item info box when the player mouses over
     public void OnPointerEnter(PointerEventData eventData)
     {
         UIManager.Instance.DisplayItemInfo(itemToDisplay);
+        Debug.Log("OnPointerEnter triggered");
     }
 
     //Reset the item info box when the player leaves
     public void OnPointerExit(PointerEventData eventData)
     {
         UIManager.Instance.DisplayItemInfo(null);
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

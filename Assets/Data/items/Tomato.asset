@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e0dc76274764e4493ce4cdf0a01ef9, type: 3}
+  m_Name: Tomato
+  m_EditorClassIdentifier: 
+  description: sometis it call fruit
+  thumbnail: {fileID: -1581195075, guid: 8dc15489dce9f024492ec83664655b64, type: 3}
+  gameModel: {fileID: 8339911888800022676, guid: 91a97db7e7ac8754ab62d808de37f82c, type: 3}

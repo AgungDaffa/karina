@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Hoe
   m_EditorClassIdentifier: 
   description: tilt land
-  thumbnail: {fileID: 165160533, guid: 6959ccf470db64f44a016a3fd64a529f, type: 3}
+  thumbnail: {fileID: -1316247590, guid: 6959ccf470db64f44a016a3fd64a529f, type: 3}
   gameModel: {fileID: 0}
   toolType: 0

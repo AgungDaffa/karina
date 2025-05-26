@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: WateringCan
   m_EditorClassIdentifier: 
   description: ya can
-  thumbnail: {fileID: 0}
+  thumbnail: {fileID: 21300000, guid: ca15aef7e86269b46b02fcaddcc40856, type: 3}
   gameModel: {fileID: 0}
   toolType: 1

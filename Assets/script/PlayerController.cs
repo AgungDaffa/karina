@@ -32,6 +32,13 @@ public class PlayerController : MonoBehaviour
         move();
 
         Interact();
+
+        //Debugging purposes only
+        //Skip the time when the right square bracket is pressed
+        if (Input.GetKey(KeyCode.RightBracket))
+        {
+            timeManager.Instance.Tick();
+        }
     }
 
     public void Interact()
@@ -40,6 +47,13 @@ public class PlayerController : MonoBehaviour
         {
             playerInteraction.Interact();
         }
+
+        //Item interaction
+        if (Input.GetButtonDown("Fire2"))
+        {
+            playerInteraction.ItemInteract();
+        }
+
     }
 
     public void move()
